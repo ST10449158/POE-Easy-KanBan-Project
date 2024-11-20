@@ -105,6 +105,12 @@ public class PoePartOne {
 
        */
              
+     String[] developers = {"Mike Smith", "Edward Harrington", "Samantha Paulson", "Glenda Oberholzer"};
+     String[] taskNames = {"Create Login", " Create Add Features", "Create Reports", "Add Arrays"};
+     int[] taskIDs = {1, 2, 3, 4};
+     int[] taskDurations = {5, 8, 2, 11};
+     String[] taskStatuses = {"To Do", "Doing", "Done", "To Do"};
+             
                 break;
             }
             else {

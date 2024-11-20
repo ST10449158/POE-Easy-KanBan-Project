@@ -101,7 +101,8 @@ public class Login {
          
             }  
             
-public String Options(){ //part 2
+                @SuppressWarnings("empty-statement")
+                public String Options(){ //part 2
         
 //    Scanner myObj = new Scanner(System.in);
                //we dont need the Scanner if we are using JOption
@@ -158,7 +159,7 @@ public String Options(){ //part 2
                      
                           int i = 0;
                           i++;
-                     String name = JOptionPane.showInputDialog("How many Tasks would you like to add?");
+                     String name = JOptionPane.showInputDialog("What is the name of task"+ counter);
                     
                      String description = JOptionPane.showInputDialog("Write a task description, NB: It should not exceed 50 characters");
                      if(description.length() <=50){
@@ -222,8 +223,8 @@ public String Options(){ //part 2
                      
                 {
                     int[] Taskduration = new int[inputNumber];
-                    JOptionPane.showMessageDialog(null, "Total hours for all tasks:" + Arrays.toString(Task.returnTotalHours(Taskduration)));
-//                   int inputNumber1 + int inputNumber2;
+                    JOptionPane.showMessageDialog(null, "Total hours for all tasks:" + Task.returnTotalHours(Taskduration));
+                   
                 }
                     
                     
@@ -262,7 +263,7 @@ public String Options(){ //part 2
         break;
         case "7" : {
 
-        while(options.equals("7"));
+        while(!"7".equals(options));
 }
         }
         

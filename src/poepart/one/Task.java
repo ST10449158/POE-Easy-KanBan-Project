@@ -63,16 +63,16 @@ public class Task{
     //print task details after user is done adding the task details
     public String printTaskDetails(){
     String details = "TaskNumber:" + number +  "\nTask name:" + name +  "\nTask Description:" 
-        + description + "\nDeveloper:" + devsDetails + "\nTask Duration:" + duration + "hours" +   "\n Task ID:" + id + "\nTaskStatus:" + status +  "" ;
+        + description + "\nDeveloper:" + devsDetails + "\nTask Duration:" + duration + "hours" 
+            +  "\n Task ID:" + id + "\nTaskStatus:" + status +  "" ;
         return details;
 }
-    public static int[] returnTotalHours(int[] Taskduration) {
-    int duration = 0; 
-    for (int durations : Taskduration) {
-        Taskduration[durations] += duration; 
-        
+    public static int returnTotalHours(int[] taskDurations) {
+    int total = 0;
+    for (int hours : taskDurations) {
+        total += hours; 
     }
-    return Taskduration; 
+    return total; 
 }
     //properties are the Getters and Setters(they are used to get and return values)
             public String getName() { return name; }
@@ -112,7 +112,7 @@ What's left to add in part 2:
 5.GitHub:but its not neccessary.
 */
 
-//part 3 methods
+
 
        
         }

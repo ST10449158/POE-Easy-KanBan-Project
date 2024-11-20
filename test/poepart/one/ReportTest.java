@@ -41,49 +41,63 @@ public class ReportTest {
     public void tearDown() {
     }
 
-    /**
-     * Test of DisplayDoneTasks method, of class Report.
-     */
+   
     @Test
     public void TestDisplayDoneTasks() {
-    }
+        String[]Developer={"Mike Smith","Edward Harrison","Samantha Paulson","Glenda Oberholzer"};
+        String[]TaskName ={"Create Login","Create Add Features","Create Reports","Add Arrays"};
+        String[]Status ={"To Do","Doing","Done","To Do"};
+        int[]duration ={5,8,2,11};
+        Report.DisplayDoneTasks();
+        }
 
-    /**
-     * Test of LongestTaskDuration method, of class Report.
-     */
     @Test
     public void TestLongestTaskDuration() {
-        
+        String[]Developer={"Mike Smith","Edward Harrison","Samantha Paulson","Glenda Oberholzer"};
+        int[]duration ={5,8,2,11};
+        Report.LongestTaskDuration();
     }
 
-    /**
-     * Test of SearchForTask method, of class Report.
-     */
     @Test
     public void TestSearchForTask() {
+        String[]Developer={"Mike Smith","Edward Harrison","Samantha Paulson","Glenda Oberholzer"};
+        String[]TaskName ={"Create Login","Create Add Features","Create Reports","Add Arrays"};
+        String[]Status ={"To Do","Doing","Done","To Do"};
+        int[]duration ={5,8,2,11};
+        Report.SearchForTask();
         
     }
 
-    /**
-     * Test of DevelopersTasks method, of class Report.
-     */
     @Test
     public void TestDevelopersTasks() {
-        
+        String[]Developer={"Mike Smith","Edward Harrison","Samantha Paulson","Glenda Oberholzer"};
+        String[]TaskName ={"Create Login","Create Add Features","Create Reports","Add Arrays"};
+        String[]Status ={"To Do","Doing","Done","To Do"};
+        Report.DevelopersTasks();
     }
 
    
     @Test
     public void TestDeleteTasks() {
         
+        String[]Developer={"Mike Smith","Edward Harrison","Samantha Paulson","Glenda Oberholzer"};
+        String[]TaskName ={"Create Login","Create Add Features","Create Reports","Add Arrays"};
+        String[]Status ={"To Do","Doing","Done","To Do"};
+        
+        String task = "Create Reports";
+
+        Report.DeleteTasks();
+        
     }
 
-    /**
-     * Test of DisplayTaskReport method, of class Report.
-     */
+    
     @Test
     public void TestDisplayTaskReport() {
-        
+        String[]Developer={"Mike Smith","Edward Harrison","Samantha Paulson","Glenda Oberholzer"};
+        String[]TaskName ={"Create Login","Create Add Features","Create Reports","Add Arrays"};
+        String[]Status ={"To Do","Doing","Done","To Do"};
+       
+        Report.DisplayTaskReport();
     }
     
 }

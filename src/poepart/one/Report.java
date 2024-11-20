@@ -13,13 +13,13 @@ import javax.swing.JOptionPane;
 public class Report {
     //part 3 methods and populated arrays
  
-public static String[] TaskNames = new String[3];
-public static String[] Description = new String[4];
-public static String[] Developer  = new String[4];
-public static String[] TaskStatus  = new String[4];
-public static String[] TaskID  = new String[4];
-public static int[] TaskNumbers  = new int[4];
-public static int[] TasksDuration  = new int[4];
+    static String[] Developer = {"Mike Smith", "Edward Harrington", "Samantha Paulson", "Glenda Oberholzer"};
+    static String[] TaskNames = {"Create Login", " Create Add Features", "Create Reports", "Add Arrays"};
+    static int[] TaskID = {1, 2, 3, 4};
+    static int[] TasksDuration = {5, 8, 2, 11};
+    static  String[] TaskStatus = {"To Do", "Doing", "Done", "To Do"};
+    static int TaskNumbers[];
+    static String Description[];
 
 
         public static void DisplayDoneTasks(){ 
@@ -48,17 +48,31 @@ public static int[] TasksDuration  = new int[4];
         }
         
         public static void SearchForTask(){
-        String TaskName;
-
-        
+       
         for(int i = 0; i < TaskNames.length; i++){
+            JOptionPane.showInputDialog("Enter Task you want to search");
+        String[]Developer={"Mike Smith","Edward Harrison","Samantha Paulson","Glenda Oberholzer"};
+        String[]TaskNames ={"Create Login","Create Add Features","Create Reports","Add Arrays"};
+        String[]TaskStatus ={"To Do","Doing","Done","To Do"};
+        int[]TaskNumbers= {1,2,3,4};
+        String[] Description = {"Login functionality for the system.","Adding extra features to the app.",
+            "Creating reports for analysis.","Adding array functionality."};
+        int[] TasksDuration = {5, 8, 2, 11};
             
-            
-        if(TaskNames[i].equalsIgnoreCase("TaskNames")){
-        JOptionPane.showMessageDialog(null,"Task Name : " + Developer[i] + "\nTask Status:" 
-                +TaskStatus[i],"Developer Task",1);
-        }
-  }
+       
+            if (TaskNames[i].equalsIgnoreCase("taskNameToSearch")) {
+               
+                // Display task details
+                JOptionPane.showMessageDialog(
+                        null,
+                        "Task Name: " + TaskNames[i] +"\nDeveloper: " + Developer[i] + "\nTask Status: " + TaskStatus[i] +
+                                "\nTask Duration: " + TasksDuration[i] + " hours" + "\nDescription: " + Description[i],
+                        "Task Found", JOptionPane.INFORMATION_MESSAGE);
+              
+        }else {
+            JOptionPane.showMessageDialog(null,"Task not found","Developer Task",1);
+        } break;
+  }  
         }
         
         public static void DevelopersTasks(){
@@ -68,56 +82,55 @@ public static int[] TasksDuration  = new int[4];
             for(int i = 0; i < Developer.length; i++){
             if(Developer[i].equalsIgnoreCase(devTask)){
             JOptionPane.showMessageDialog(null,"Developer Details : " + Developer[i]+ "\nTask Name: "
-            + TaskNames[i] + "\nTask Status:" + TaskStatus[i],"Developer Task",1);
+            + TaskNames[i] + "\nTask Status: " + TaskStatus[i],"Developer Task: ",1);
        }
   }    
        } 
        
         public static void DeleteTasks(){
             
-        String nameOfTask;
-        int indexLess = 0;
-        String[]newTaskName;
-        int[]newTaskNumber;
-        String[]newdescription;
-        String[]newDeveloper;
-        int[]newDuration;
-        String[]newID;
-        String[]newStatus;
+        String[]Developer={"Mike Smith","Edward Harrison","Samantha Paulson","Glenda Oberholzer"};
+        String[]TaskNames ={"Create Login","Create Add Features","Create Reports","Add Arrays"};
+        String[]TaskStatus ={"To Do","Doing","Done","To Do"};
+        int[]TaskNumbers= {1,2,3,4};
+        String[] Description = {"Login functionality for the system.","Adding extra features to the app.",
+            "Creating reports for analysis.","Adding array functionality."};
+        int[] TasksDuration = {5, 8, 2, 11};
         
-//        TaskID = new String[TaskID.length-1];
-//        TaskStatus = new String[TaskStatus.length-1];
-//        TasksDuration= new int[TasksDuration.length-1];
-//        TaskNames = new String[TaskNames.length-1];
-//        TaskNumbers = new int[TaskNumbers.length-1];
-//        Developer= new String[Developer.length-1];
-//        Description = new String[Description.length-1];        
-        
-         String taskname = JOptionPane.showInputDialog(null, "Please write the name of the Task you want to delete.", "Delete a Task", 2);
-//        Integer.parseInt(TaskNames);
-        
-        for(int i = 0; i < TaskNames.length; i++){
-            
-        if(!TaskNames[i].equalsIgnoreCase(taskname)){
-        TaskNames[indexLess] = TaskNames[i];
-        TaskNumbers[indexLess] = TaskNumbers[i];
-        Description[indexLess] = Description[i];
-        Developer[indexLess] = Developer[i];
-        TasksDuration[indexLess] = TasksDuration[i];
-        TaskID[indexLess] = TaskID[i];
-        TaskStatus[indexLess] = TaskStatus[i];
-        indexLess++;
+        for (int i = 0; i < TaskNames.length; i++) {
+        if (TaskNames[i].equalsIgnoreCase("")) {
+            JOptionPane.showMessageDialog(null,"Task Name " + TaskNames[i] + "successfully deleted.");
+            TaskNames[i] = null; 
+            return;
         }
-        }
-        JOptionPane.showMessageDialog(null, "The Task has been deleted", "Successfully Deleted", 1);
-        
-} 
+    }
+    System.out.println("Task not found.");
+}
         public static void DisplayTaskReport(){
+        String[]Developer={"Mike Smith","Edward Harrison","Samantha Paulson","Glenda Oberholzer"};
+        String[]TaskNames ={"Create Login","Create Add Features","Create Reports","Add Arrays"};
+        String[]TaskStatus ={"To Do","Doing","Done","To Do"};
+        int[]TaskNumbers= {1,2,3,4};
+        String[] Description = {"Login functionality for the system.","Adding extra features to the app.",
+            "Creating reports for analysis.","Adding array functionality."};
+        int[] TasksDuration = {5, 8, 2, 11};
+        
             for(int i = 0; i < TaskNames.length; i++){
         JOptionPane.showMessageDialog(null,"Task Name: " + TaskNames[i] + "\nTask number:" + TaskNumbers[i]
                 + "\nTask Description: " + Description[i] + "\nDeveloper Details: " + Developer[i] + "\nTask Duration:"
                 + TasksDuration[i] + "hours" + "\nTask ID: " + TaskID[i]+ "\nTask Status: " + TaskStatus[i] ,"Task Report",1);
 }
-    
-} 
+        
 }
+}
+//        public static String[]
+        
+//      at poepart.one.Report.DisplayTaskReport(Report.java:117)
+//	at poepart.one.Login.Options(Login.java:262)
+//	at poepart.one.PoePartOne.main(PoePartOne.java:64)
+        
+//        Exception in thread "main" java.lang.NullPointerException: Cannot load from int array because "poepart.one.Report.TaskNumbers" is null
+//	at poepart.one.Report.DisplayTaskReport(Report.java:117)
+//	at poepart.one.Login.Options(Login.java:262)
+//	at poepart.one.PoePartOne.main(PoePartOne.java:64)
+       
