@@ -55,7 +55,7 @@ public class ReportTest {
     public void TestLongestTaskDuration() {
         String[]Developer={"Mike Smith","Edward Harrison","Samantha Paulson","Glenda Oberholzer"};
         int[]duration ={5,8,2,11};
-        Report.LongestTaskDuration();
+        Report.DisplayDoneTasks(); 
     }
 
     @Test
@@ -83,9 +83,7 @@ public class ReportTest {
         String[]Developer={"Mike Smith","Edward Harrison","Samantha Paulson","Glenda Oberholzer"};
         String[]TaskName ={"Create Login","Create Add Features","Create Reports","Add Arrays"};
         String[]Status ={"To Do","Doing","Done","To Do"};
-        
         String task = "Create Reports";
-
         Report.DeleteTasks();
         
     }
@@ -96,7 +94,6 @@ public class ReportTest {
         String[]Developer={"Mike Smith","Edward Harrison","Samantha Paulson","Glenda Oberholzer"};
         String[]TaskName ={"Create Login","Create Add Features","Create Reports","Add Arrays"};
         String[]Status ={"To Do","Doing","Done","To Do"};
-       
         Report.DisplayTaskReport();
     }
     

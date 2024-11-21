@@ -48,31 +48,25 @@ public class Report {
         }
         
         public static void SearchForTask(){
-       
-        for(int i = 0; i < TaskNames.length; i++){
-            JOptionPane.showInputDialog("Enter Task you want to search");
-        String[]Developer={"Mike Smith","Edward Harrison","Samantha Paulson","Glenda Oberholzer"};
+         String[]Developer={"Mike Smith","Edward Harrison","Samantha Paulson","Glenda Oberholzer"};
         String[]TaskNames ={"Create Login","Create Add Features","Create Reports","Add Arrays"};
         String[]TaskStatus ={"To Do","Doing","Done","To Do"};
         int[]TaskNumbers= {1,2,3,4};
         String[] Description = {"Login functionality for the system.","Adding extra features to the app.",
             "Creating reports for analysis.","Adding array functionality."};
         int[] TasksDuration = {5, 8, 2, 11};
-            
+        
        
-            if (TaskNames[i].equalsIgnoreCase("taskNameToSearch")) {
-               
-                // Display task details
-                JOptionPane.showMessageDialog(
-                        null,
-                        "Task Name: " + TaskNames[i] +"\nDeveloper: " + Developer[i] + "\nTask Status: " + TaskStatus[i] +
-                                "\nTask Duration: " + TasksDuration[i] + " hours" + "\nDescription: " + Description[i],
-                        "Task Found", JOptionPane.INFORMATION_MESSAGE);
-              
-        }else {
-            JOptionPane.showMessageDialog(null,"Task not found","Developer Task",1);
-        } break;
-  }  
+        String Task;
+            Task = JOptionPane.showInputDialog(null, "Please enter the task you want to search: ",
+            "Task", 1);
+            for(int i = 0; i < TaskNames.length; i++){
+            if(TaskNames[i].equalsIgnoreCase(Task)){
+            JOptionPane.showMessageDialog(null,"Developer Details : " + Developer[i]+ "\nTask Name: "
+            + TaskNames[i] + "\nTask Status: " + TaskStatus[i],"Developer Task: ",1);
+       }
+  }    
+
         }
         
         public static void DevelopersTasks(){
@@ -93,18 +87,22 @@ public class Report {
         String[]TaskNames ={"Create Login","Create Add Features","Create Reports","Add Arrays"};
         String[]TaskStatus ={"To Do","Doing","Done","To Do"};
         int[]TaskNumbers= {1,2,3,4};
-        String[] Description = {"Login functionality for the system.","Adding extra features to the app.",
-            "Creating reports for analysis.","Adding array functionality."};
+        String[] Description = {"Login functionality for the system.","Adding extra features to the app." ,"Creating reports for analysis.","Adding array functionality."};
         int[] TasksDuration = {5, 8, 2, 11};
         
-        for (int i = 0; i < TaskNames.length; i++) {
-        if (TaskNames[i].equalsIgnoreCase("")) {
-            JOptionPane.showMessageDialog(null,"Task Name " + TaskNames[i] + "successfully deleted.");
-            TaskNames[i] = null; 
-            return;
-        }
-    }
-    System.out.println("Task not found.");
+       String DeleteTask;
+       
+       DeleteTask = JOptionPane.showInputDialog(null, "Please enter the task you want to search: ", "Task", 1);   
+       for(int i = 0; i < TaskNames.length; i++){
+            if(TaskNames[i].equals(DeleteTask)){
+                JOptionPane.showMessageDialog(null, "Task " + TaskNames[i] + "  was successfully deleted" ,"DeleteTask: ",1);
+                break;
+       }
+            else {
+                JOptionPane.showMessageDialog(null, "Task  not found");
+                break;
+            }
+  }    
 }
         public static void DisplayTaskReport(){
         String[]Developer={"Mike Smith","Edward Harrison","Samantha Paulson","Glenda Oberholzer"};
@@ -119,18 +117,21 @@ public class Report {
         JOptionPane.showMessageDialog(null,"Task Name: " + TaskNames[i] + "\nTask number:" + TaskNumbers[i]
                 + "\nTask Description: " + Description[i] + "\nDeveloper Details: " + Developer[i] + "\nTask Duration:"
                 + TasksDuration[i] + "hours" + "\nTask ID: " + TaskID[i]+ "\nTask Status: " + TaskStatus[i] ,"Task Report",1);
+        break;
+    
+            }
+
+        }
 }
-        
-}
-}
+
+//        ERRORS
 //        public static String[]
-        
-//      at poepart.one.Report.DisplayTaskReport(Report.java:117)
+//        
+//        at poepart.one.Report.DisplayTaskReport(Report.java:117)
 //	at poepart.one.Login.Options(Login.java:262)
 //	at poepart.one.PoePartOne.main(PoePartOne.java:64)
-        
+//        
 //        Exception in thread "main" java.lang.NullPointerException: Cannot load from int array because "poepart.one.Report.TaskNumbers" is null
 //	at poepart.one.Report.DisplayTaskReport(Report.java:117)
 //	at poepart.one.Login.Options(Login.java:262)
 //	at poepart.one.PoePartOne.main(PoePartOne.java:64)
-       

@@ -101,7 +101,7 @@ public class Login {
          
             }  
             
-                @SuppressWarnings("empty-statement")
+               
                 public String Options(){ //part 2
         
 //    Scanner myObj = new Scanner(System.in);
@@ -180,6 +180,7 @@ public class Login {
                     devsDetails.substring(devsDetails.length() -3).toUpperCase();
                     
                     JOptionPane.showMessageDialog(null,"Task ID is: "+id,"TaskID",1);
+                    
                     Task myobj = new Task("Task name",0,"task description","Developers details",0,"Task ID", "task Status"  );       
     
                     //the user has to choose the task status
@@ -210,12 +211,9 @@ public class Login {
                             case 3: 
                         status="Done";
                         
-                        
-                        
                             break;
                 }
-                    
-                    //displaying of tasks at the end of
+                    //displaying of tasks at the end 
                     Task Myobj = new Task(name,inputNumber,description,devsDetails,inputDuration,id,status);
                     JOptionPane.showInputDialog(Myobj.displayingTasks());
                     counter++;
@@ -226,11 +224,10 @@ public class Login {
                     JOptionPane.showMessageDialog(null, "Total hours for all tasks:" + Task.returnTotalHours(Taskduration));
                    
                 }
-                    
-                    
                     break;
 
                 case 2://if they choose 2 they should be able to see reports
+                    
                     //part 3                    
                     //Give a report.
                     //search for tasks.
@@ -257,7 +254,7 @@ public class Login {
         break;
         case "4" : Report.DevelopersTasks();
         break;
-        case "5" :  Report.DeleteTasks();
+        case "5" : Report.DeleteTasks();
         break;
         case "6" : Report.DisplayTaskReport();
         break;
