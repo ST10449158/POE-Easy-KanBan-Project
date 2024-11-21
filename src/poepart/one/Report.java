@@ -92,11 +92,11 @@ public class Report {
         
        String DeleteTask;
        
-       DeleteTask = JOptionPane.showInputDialog(null, "Please enter the task you want to search: ", "Task", 1);   
        for(int i = 0; i < TaskNames.length; i++){
+            DeleteTask = JOptionPane.showInputDialog(null, "Please enter the task you want to search: ", "Task", 1); 
             if(TaskNames[i].equals(DeleteTask)){
                 JOptionPane.showMessageDialog(null, "Task " + TaskNames[i] + "  was successfully deleted" ,"DeleteTask: ",1);
-                break;
+               
        }
             else {
                 JOptionPane.showMessageDialog(null, "Task  not found");
